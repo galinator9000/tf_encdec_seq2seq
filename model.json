@@ -12,7 +12,7 @@
 	"dropout_keep_prob_rnn_input": 0.8,
 	"dropout_keep_prob_rnn_output": 0.8,
 	"dropout_keep_prob_rnn_state": 0.8,
-	"bucket_use_padding": true,
+	"bucket_use_padding": false,
 	"bucket_padding_input": [3, 5, 10, 15, 20],
 	"bucket_padding_output": [1, 2, 3, 5, 10, 15, 21],
 	"train_epochs": 3,
