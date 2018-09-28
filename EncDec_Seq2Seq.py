@@ -1,8 +1,9 @@
 #! -*- coding: UTF-8 -*-
+"""
+Main class for Sequence-to-Sequence Encoder-Decoder model.
+"""
 
 import tensorflow as tf
-
-# Main class for Sequence-to-Sequence Encoder-Decoder model.
 
 class EncDec_Seq2Seq:
 	def __init__(self, mode, hParams, embedding_matrix, VOCAB, vocab_length, decode_max_timestep, sess_cfg=None):

@@ -1,4 +1,7 @@
 #! -*- coding: UTF-8 -*-
+"""
+Holds functions that needs to be accessible from anywhere in project.
+"""
 
 import tensorflow as tf
 import numpy as np

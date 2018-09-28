@@ -1,9 +1,9 @@
 #! -*- coding: UTF-8 -*-
+"""
+Build model, load weights and let the user interact with model.
+"""
 
 import tensorflow as tf
-import numpy as np
-import random
-
 from EncDec_Seq2Seq import EncDec_Seq2Seq
 from utils import *
 

@@ -1,8 +1,15 @@
 #! -*- coding: UTF-8 -*-
+"""
+Build model, load weights. Feed model inputs that comes from input file.
+"""
 
-import tensorflow as tf
-import numpy as np
-import random
+import sys
+assert sys.argv[1]
+input_fileName = sys.argv[1]
+try:
+	cikti_dosyaAdi = sys.argv[2]
+except IndexError:
+	output_fileName = "outputs.txt"
 
 from EncDec_Seq2Seq import EncDec_Seq2Seq
 from utils import *
@@ -33,8 +40,8 @@ model.build()
 model.load("model/Weights", True)
 
 # Read input file.
-inputs = apply_filter(open("inputs.txt", "r", encoding="utf-8").read().split("\n"))
-outputF = open("outputs.txt", "w", encoding="utf-8")
+inputs = apply_filter(open(input_fileName, "r", encoding="utf-8").read().split("\n"))
+outputF = open(output_fileName, "w", encoding="utf-8")
 
 # Test!
 for _input in inputs:
@@ -51,9 +58,7 @@ for _input in inputs:
 	except:
 		pass
 
-	print(_input)
-	print(_output)
-	print("______________________")
+	print(_input, _output)
 	
 	outputF.write(_output + "\n")
 outputF.close()

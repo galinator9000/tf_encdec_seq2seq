@@ -1,9 +1,10 @@
 #! -*- coding: UTF-8 -*-
+"""
+Build model, if exists load weights. Then train the model on dataset.
+"""
 
-import tensorflow as tf
 import numpy as np
 import random
-
 from EncDec_Seq2Seq import EncDec_Seq2Seq
 from utils import *
 

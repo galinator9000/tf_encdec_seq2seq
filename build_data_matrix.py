@@ -1,7 +1,9 @@
 #! -*- coding: UTF-8 -*-
+"""
+Reads data as raw text file, converts to matrices and saves to disk.
+"""
 
 import numpy as np
-import json, operator
 from utils import *
 
 # Creates 3 matrices with given config & data: encX, decX, decy
